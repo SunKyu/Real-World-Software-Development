@@ -8,13 +8,15 @@ class BankStatementAnalyzer() {
     private val RESOURCES = "src/main/resources/"
 
     @Throws(IOException::class)
-    fun analyze(fileName: String, bankStatementParser: BankStatementParser) {
+    fun analyze(fileName: String, bankStatementParser: BankStatementParser, exporter: Exporter) {
         val path = Paths.get("$RESOURCES$fileName")
         val lines = Files.readAllLines(path)
 
         val bankTransactions = bankStatementParser.parseLinesFrom(lines)
         val bankStatementProcessor = BankStatementProcessor(bankTransactions)
+        val summaryStatistics = bankStatementProcessor.summarizeTransactions()
 
+        println(exporter.export(summaryStatistics))
         collectSummary(bankStatementProcessor)
 
     }
