@@ -1,3 +1,5 @@
+package chaptor3
+
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
@@ -6,7 +8,7 @@ class BankStatementCSVParser(): BankStatementParser {
     private val DATE_PATTERN = DateTimeFormatter.ofPattern("dd-MM-yyyy")
 
 
-    override fun parseFrom(line: String): BankTransaction{
+    override fun parseFrom(line: String): BankTransaction {
         val columns = line.split(',')
 
         val date = LocalDate.parse(columns[0], DATE_PATTERN)

@@ -1,3 +1,5 @@
+package chaptor3
+
 class Notification {
     val errors = arrayListOf<String>()
 

@@ -1,3 +1,5 @@
+package chaptor3
+
 import java.time.LocalDate
 
 data class BankTransaction(
@@ -10,7 +12,7 @@ data class BankTransaction(
     fun equals(o: Any?): Boolean{
         if (this == o) return true
         if (o == null || this.javaClass != o::javaClass) return false
-        val that: BankTransaction = o
+        val that: chaptor3.BankTransaction = o
         return that.amount == amount && date.equals(that.date) && desc.equals(that.desc)
     }
      */

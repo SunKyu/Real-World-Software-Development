@@ -1,3 +1,5 @@
+package chaptor3
+
 import java.time.Month
 
 class BankStatementProcessor(
@@ -9,7 +11,8 @@ class BankStatementProcessor(
         val doubleSummaryStatistics = bankTransactions.stream()
             .mapToDouble(BankTransaction::amount)
             .summaryStatistics()
-        return SummaryStatistics(doubleSummaryStatistics.sum,
+        return SummaryStatistics(
+            doubleSummaryStatistics.sum,
             doubleSummaryStatistics.max,
             doubleSummaryStatistics.min,
             doubleSummaryStatistics.average

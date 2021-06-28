@@ -1,3 +1,5 @@
+package chaptor3
+
 class HtmlExporter: Exporter {
     override fun export(summaryStatistics: SummaryStatistics): String {
         var result = "<!doctype html>"

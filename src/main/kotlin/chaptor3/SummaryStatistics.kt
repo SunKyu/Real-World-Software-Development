@@ -1,3 +1,5 @@
+package chaptor3
+
 data class SummaryStatistics (
         val sum: Double,
         val max: Double,
