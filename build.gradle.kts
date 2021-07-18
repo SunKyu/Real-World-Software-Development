@@ -14,6 +14,10 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    testImplementation("io.kotest:kotest-runner-junit5:4.4.1")
+    testImplementation("io.kotest:kotest-assertions-core:4.4.1")
+    testImplementation("io.kotest:kotest-property:4.4.1")
+    testImplementation("io.mockk:mockk:1.10.3-jdk8")
 }
 
 tasks.test {
